@@ -1,3 +1,33 @@
-<p>
-  Serie-list works!
-</p>
+<div class="container-fluid mt-2 mb-4">
+  <h2 class="text-center">TV Series</h2>
+
+  <div class="row">
+    <div class="col-md-6" id="centrado">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nombre:</th>
+            <th scope="col">Plataforma:</th>
+            <th scope="col">Temporadas:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let serie of series">
+            
+            <td>{{ serie.nombre }}</td>
+            <td>{{ serie.plataforma }}</td>
+            <td>{{ serie.temporadas }}</td>
+          </tr>
+          <tr>
+              <td ></td>
+              <td><strong>Promedio Temporadas:</strong></td>
+              <td>{{ promedioTemporadas | number:'1.0-0' }}</td>
+            </tr>
+        </tbody>
+        
+      </table>
+    </div>
+
+  </div>
+</div>
+
